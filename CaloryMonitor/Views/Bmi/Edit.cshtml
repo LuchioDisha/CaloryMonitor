@@ -1,0 +1,27 @@
+﻿@model BmiRecord
+
+<h2>Редактирай BMI запис</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Дата</label>
+        <input asp-for="Date" type="date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Тежест в килорграми (Пример: 81)</label>
+        <input asp-for="WeightKg" class="form-control" />
+        <span asp-validation-for="WeightKg" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Височина в метри (Пример: 1.79)</label>
+        <input asp-for="HeightMeters" class="form-control" />
+        <span asp-validation-for="HeightMeters" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Запази промените</button>
+</form>
